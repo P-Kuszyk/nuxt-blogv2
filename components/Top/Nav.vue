@@ -79,5 +79,24 @@ const showMenu = () => {
 </nav>
 </template>
 <style scoped lang="scss">
+.navbar {
+  background-color: #058549;
+}
 
+.navbar-menu {
+  position: absolute;
+  left: 10%;
+  width: 100%;
+}
+
+.navbar-menu a {
+  color: #000;
+
+}
+
+.logo {
+  @media screen and (max-width: 1023px) {
+    display: none;
+  }
+}
 </style>
