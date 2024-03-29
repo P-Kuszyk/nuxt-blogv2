@@ -1,19 +1,16 @@
 <template>
     <TopInfoBar>
       <template v-slot:title>
-        Telefon
+        Telefon 
       </template>
       <template v-slot:content>
-        111 222 333
+        333 222 111
       </template>
-    </TopInfoBar>
-  
-    <TopInfoBar>
-      <template v-slot:title>
+      <template v-slot:title2>
         Email
       </template>
-      <template v-slot:content>
-       ssssssssssssss@ssssss
+      <template v-slot:content2>
+        dupadupa@wp.pl
       </template>
     </TopInfoBar>
   

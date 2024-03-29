@@ -1,4 +1,23 @@
 <script setup>
+const props = defineProps(
+    {
+      title: {
+        type: String,
+        default: () => 'Domyślna wartość'
+      },
+      content: {
+        type: String,
+        default: () => 'Domyślna wartość'
+      }
+    }
+)
+
+const description = ref(props.title)
+
+const clickbutton = () => description.value = 'Opis'
+const clickbutton2 = () => props.title = 'Opis' // ta operacja sie nie wykona bo props jest na modyfikatorze readonly
+const clickbutton3 = () => description.value = 'Opis' // ta operacja sie nie wykona bo props jest na modyfikatorze readonly
+
 </script>
 <template>
   <div class="info">
@@ -7,9 +26,28 @@
 </span>
     <slot name="content">Domyślna</slot>
   </div>
+
+  <div class="info2">
+<span>
+<slot name="title2">Domyślna</slot>:
+</span>
+    <slot name="content2">Domyślna</slot>
+  </div>
+
+  <div>
+    <h1>{{ title }}</h1>
+    <p>{{ content }}</p>
+    <p>{{ description }}</p>
+  </div>
+  <button @click="clickbutton">Klik</button>
+  <button @click="clickbutton2">Klik2</button>
+  <button @click="clickbutton3">Klik3</button>
+
+
 </template>
+
 <style scoped lang="scss">
-.info {
+.info, .info2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
