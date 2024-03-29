@@ -12,12 +12,11 @@ const props = defineProps(
     }
 )
 
-const description = ref(props.title)
+const description = ref(0)
 
 const clickbutton = () => description.value = 'Opis'
 const clickbutton2 = () => props.title = 'Opis' // ta operacja sie nie wykona bo props jest na modyfikatorze readonly
-const clickbutton3 = () => description.value = 'Opis' // ta operacja sie nie wykona bo props jest na modyfikatorze readonly
-
+const clickbutton3 = () => description.value += 1 
 </script>
 <template>
   <div class="info">
