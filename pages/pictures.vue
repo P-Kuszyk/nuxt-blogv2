@@ -2,7 +2,7 @@
 
 </script>
 <template>
- <h3><span>About</span></h3>
+ <h3><span>Pictures</span></h3>
 </template>
 <style scoped lang="scss">
 h3 {
