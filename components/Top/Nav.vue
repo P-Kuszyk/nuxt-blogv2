@@ -36,8 +36,8 @@ const showMenu = () => {
         about
       </NuxtLink>
 
-      <a href="/about" class="navbar-item">
-        about (nie spa)
+      <a href="/pictures" class="navbar-item">
+        Pictures
       </a>
 
       <div class="navbar-item has-dropdown is-hoverable">
