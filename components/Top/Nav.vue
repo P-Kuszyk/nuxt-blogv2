@@ -33,7 +33,7 @@ const showMenu = () => {
       </NuxtLink>
 
       <NuxtLink to="/about" class="navbar-item">
-        about
+        About
       </NuxtLink>
 
       <a href="/pictures" class="navbar-item">
@@ -41,9 +41,6 @@ const showMenu = () => {
       </a>
 
       <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More
-        </a>
 
         <div class="navbar-dropdown">
           <a class="navbar-item">
