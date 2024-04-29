@@ -35,20 +35,48 @@ watch(resultQuery, (newValue, oldValue) => {
         <input type="text" v-model="searchQuery">
         <button @click="searchData" v-if="!loader">Wyszukaj</button>
         <button @click="searchData" disabled v-else>Wyszukaj</button>
-        <div class="cos" v-if="loader">To jest ladowanie danych</div>
+        <div class="loading" v-if="loader">To jest ladowanie danych</div>
 
         <div class="result" v-else>
-            <div v-for="(value, index) in arrayData" :key=index>
-                {{  value.links }}
+            <div v-for="(value, index) in arrayData" :key="index">
+                <template v-if="value.links">
+                    <template v-if="value.links[0]">
+                        <img :src="value.links[0].href" alt="NASA Image">
+                    </template>
+                </template>
+            </div>
         </div>
-        </div>
-        
     </div>
 </template>
+
 <style scoped lang="scss">
-h3 {
-    span {
-        color: green
-    }
+button, input{
+    border-radius: 5px;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-bottom: 3px;
+    align: right;
 }
+
+input{
+    width:400px;
+}
+
+input:hover{
+    color: white;
+    background: black;
+    transition: 0.2s 
+}
+
+img{
+    width: 500px;
+    height: 250px;
+    display: flex;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
 </style>
