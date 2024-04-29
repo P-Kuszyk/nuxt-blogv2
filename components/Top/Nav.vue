@@ -32,6 +32,10 @@ const showMenu = () => {
         Home
       </NuxtLink>
 
+      <NuxtLink to="/api" class="navbar-item">
+        API
+      </NuxtLink>
+
       <NuxtLink to="/about" class="navbar-item">
         About
       </NuxtLink>

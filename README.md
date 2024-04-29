@@ -4,12 +4,12 @@ Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introdu
 Projekt: Blog z AI Django  
 Wymagania:
 - komponenty
-- fetch
-- bulma
+- fetch | ✅
+- bulma | ✅
 - scss
-- :deep
-- routing
-- git :)
+- :deep | ✅
+- routing | ✅
+- git :) | ✅
 
 ## Setup
 
