@@ -35,7 +35,7 @@ watch(resultQuery, (newValue, oldValue) => {
         <input type="text" v-model="searchQuery">
         <button @click="searchData" v-if="!loader">Wyszukaj</button>
         <button @click="searchData" disabled v-else>Wyszukaj</button>
-        <div class="loading" v-if="loader">To jest ladowanie danych</div>
+        <div class="loading" v-if="loader"><h4>Ładowanie obrazów...</h4></div>
 
         <div class="result" v-else>
             <div v-for="(value, index) in arrayData" :key="index">
@@ -52,23 +52,44 @@ watch(resultQuery, (newValue, oldValue) => {
 <style scoped lang="scss">
 button, input{
     border-radius: 5px;
-    font-size: 30px;
+    font-size: 28px;
     margin-top: 10px;
     margin-left: 5px;
     margin-bottom: 3px;
+    padding: 2px;
     align: right;
 }
 
 input{
     width:400px;
+    transition: 0.5s;
+
+    &:hover{
+        color: white;
+        background: black;
+    }
+
+    &:focus{
+        color: gold;
+        font-style: bold;
+    }
+
 }
 
-input:hover{
-    color: white;
-    background: black;
-    transition: 0.2s 
-}
+button{
+    width: 150px;
+    transition: 0.5s;
 
+    &:hover{
+        color: white;
+        background: black;
+    }
+
+    &:active{
+        color: white;
+        background-color: red; 
+    }
+}
 img{
     width: 500px;
     height: 250px;
@@ -76,7 +97,9 @@ img{
     margin-top: 5px;
     margin-left: auto;
     margin-right: auto;
-    
 }
 
+h4{
+    font-size: 30px;
+}
 </style>

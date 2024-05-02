@@ -49,23 +49,36 @@ export default {
 .SpacePicture{
   background: black;
   display: flexbox;
+
   img{
     width: 1300px;
     height: 700px;
-    margin-top: 25px;
     border-radius: 20px; 
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    margin-bottom: 10px;
+    animation: przesuwanie 15s infinite alternate;
     
+    &:nth-of-type(2){
+      animation: przesuwanie 12s infinite alternate;
+    }
+
+    &:nth-of-type(3){
+      animation: przesuwanie 9s infinite alternate;
+    }
   }
-  img:first-child{
-    margin-left: 100px;
-    transition-timing-function: ease-in;
-    transition-delay: 2s;
+
+  @keyframes przesuwanie{
+  0%{
+      transform: translateX(0);
   }
-  img:nth-of-type(2){
-    margin-left: 250px;
+  50%{
+    transform: translateX(25%)
   }
-  img:nth-of-type(3){
-    margin-left: 450px;
+  100% {
+      transform: translateX(-25%); 
+    }
   }
 }
 </style>

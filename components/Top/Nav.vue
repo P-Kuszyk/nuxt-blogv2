@@ -47,19 +47,7 @@ const showMenu = () => {
       <div class="navbar-item has-dropdown is-hoverable">
 
         <div class="navbar-dropdown">
-          <a class="navbar-item">
-            About
-          </a>
-          <a class="navbar-item">
-            Jobs
-          </a>
-          <a class="navbar-item">
-            Contact
-          </a>
           <hr class="navbar-divider">
-          <a class="navbar-item">
-            Report an issue
-          </a>
         </div>
       </div>
     </div>
@@ -86,7 +74,7 @@ const showMenu = () => {
 
 .navbar-menu {
   position: absolute;
-  left: 10%;
+  left: 8%;
   width: 100%;
 }
 
